@@ -16,11 +16,6 @@
         <module>ssm-common</module>
         <module>ssm-dao</module>
         <module>ssm-pojo</module>
-        <module>ssm-common</module>
-        <module>ssm-pojo</module>
-        <module>ssm-dao</module>
-        <module>ssm-service</module>
-        <module>ssm-web</module>
     </modules>
 
     <properties>
