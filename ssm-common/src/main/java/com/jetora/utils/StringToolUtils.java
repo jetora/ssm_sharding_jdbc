@@ -11,7 +11,7 @@ import java.util.Vector;
  * @author
  * @date
  */
-public class StringUtils {
+public class StringToolUtils {
     /**
      * 将String数组转换为String字符串
      * @param strArray 要处理的String数组

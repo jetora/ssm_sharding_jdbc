@@ -1,5 +1,7 @@
 package com.jetora.pojo;
 
+import java.io.Serializable;
+
 public class User {
     private Integer uId;
 

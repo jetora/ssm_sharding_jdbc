@@ -35,4 +35,5 @@
 
     <!-- 启用spring mvc 注解 -->
     <mvc:annotation-driven></mvc:annotation-driven>
+
 </beans>
