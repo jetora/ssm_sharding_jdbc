@@ -1,8 +1,6 @@
 Maven的多模块 Spring MVC + Spring + Mybatis 项目的搭建
 
-项目整体目录  
-# 项目结构
-## 项目目录
+项目目录  
 ```
 ssm_multi_modules
 ├── ssm-common -- 公共模块，主要存放一些工具类
@@ -24,12 +22,12 @@ ssm_multi_modules
 ```
 各模块的依赖关系  
 ```
-						ssm_multi_modules   
-								|  
-   -------------------------------------------------------------  
-  |					|				|			|				|  
-ssm-dao			ssm-service		ssm-web		ssm-common		ssm-pojo  
-  |依赖				|依赖			|依赖  
-  \/				\/				\/   
-ssm-pojo		ssm-dao			ssm-service  				
+                    ssm_multi_modules   
+                         |  
+   ---------------------------------------------------------  
+  |	            |               |           |           |  
+ssm-dao     ssm-service     ssm-web     ssm-common      ssm-pojo  
+  |依赖           |依赖         |依赖  
+  \/             \/            \/   
+ssm-pojo        ssm-dao     ssm-service  				
 ```				
