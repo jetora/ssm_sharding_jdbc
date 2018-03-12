@@ -49,3 +49,6 @@ xxxMapper.xml	    ssm-web/src/main/resources/mapper   通过mybatis-generator自
 jdbc.properties	    ssm-web/src/main/resources/	        配置数据库连接信息  
 log4j.properties    ssm-web/src/main/resources/         日志配置文件，方便调试bug，打印日志，需要配置此项  
 ```	
+
+测试  
+http://localhost:8080/ssm-demo/getUserById?userId=1  
