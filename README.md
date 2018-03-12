@@ -32,6 +32,7 @@ ssm-dao     ssm-service     ssm-web     ssm-common      ssm-pojo
 ssm-pojo        ssm-dao     ssm-service  				
 ```				
 SSM框架的整合  
+```
 开发环境是：
     IntelliJ IDEA 2017.3.4
     JDK 1.8.0_162
@@ -50,3 +51,4 @@ spring-mybatis.xml  ssm-web/src/main/resources/spring   spring与mybatis的整�
 xxxMapper.xml	    ssm-web/src/main/resources/mapper   通过mybatis-generator自动生成的mapper数据库映射文件。  
 jdbc.properties	    ssm-web/src/main/resources/	        配置数据库连接信息  
 log4j.properties    ssm-web/src/main/resources/         日志配置文件，方便调试bug，打印日志，需要配置此项  
+```	
