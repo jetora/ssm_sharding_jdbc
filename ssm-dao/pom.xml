@@ -57,7 +57,7 @@
             <version>${pagehelper.version}</version>
         </dependency>
 
-        <!--阿里巴巴德鲁伊数据库连接池-->
+        <!--阿里巴巴druid数据库连接池-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
