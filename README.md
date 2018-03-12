@@ -51,4 +51,4 @@ log4j.properties    ssm-web/src/main/resources/         日志配置文件，方
 ```	
 
 测试  
-http://localhost:8080/ssm-demo/user/3
+http://localhost:8080/ssm-demo/user/3  
