@@ -35,7 +35,7 @@ ssm-pojo        ssm-dao     ssm-service
     JDK 1.8.0_162  
     Tomcat 7  
     Maven 3.5.3  
-    MySQL 5.7.16  
+    MySQL 5.7.21  
 三大框架版本：  
     Spring 5.0.4.RELEASE  
     Spring MVC 5.0.4.RELEASE  
