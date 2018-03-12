@@ -18,3 +18,12 @@ ssm-demo
 |    ├── src  
 |    ├── pom.xml -- 打包方式：war  
 ├── pom.xml --打包方式为pom，一些公用的依赖  
+各模块的依赖关系  
+						ssm_multi_modules   
+								|  
+   -------------------------------------------------------------  
+  |					|				|			|				|  
+ssm-dao			ssm-service		ssm-web		ssm-common		ssm-pojo  
+  |依赖				|依赖			|依赖  
+  \/				\/				\/   
+ssm-pojo		ssm-dao			ssm-service  				
