@@ -42,12 +42,11 @@ SSM框架的整合
     Spring 5.0.4.RELEASE
     Spring MVC 5.0.4.RELEASE
     MyBatis 3.4.5
-核心配置文件：
-
-文件名                     所属目录                            描述
-mybatis-config.xml  ssm-web/src/main/resources/spring   mybatis分页插件pagehelper配置文件
-spring-mvc.xml	    ssm-web/src/main/resources/spring   配置spring mvc，比如配置视图解析器、文件上传、spring mvc 注解等等。
-spring-mybatis.xml  ssm-web/src/main/resources/spring   spring与mybatis的整合文件，数据源、自动扫描、事务管理等都是在这里配置。
-xxxMapper.xml	    ssm-web/src/main/resources/mapper   通过mybatis-generator自动生成的mapper数据库映射文件。
-jdbc.properties	    ssm-web/src/main/resources/	        配置数据库连接信息
-log4j.properties    ssm-web/src/main/resources/         日志配置文件，方便调试bug，打印日志，需要配置此项
+核心配置文件：  
+文件名                     所属目录                            描述  
+mybatis-config.xml  ssm-web/src/main/resources/spring   mybatis分页插件pagehelper配置文件  
+spring-mvc.xml	    ssm-web/src/main/resources/spring   配置spring mvc，比如配置视图解析器、文件上传、spring mvc 注解等等。  
+spring-mybatis.xml  ssm-web/src/main/resources/spring   spring与mybatis的整合文件，数据源、自动扫描、事务管理等都是在这里配置。  
+xxxMapper.xml	    ssm-web/src/main/resources/mapper   通过mybatis-generator自动生成的mapper数据库映射文件。  
+jdbc.properties	    ssm-web/src/main/resources/	        配置数据库连接信息  
+log4j.properties    ssm-web/src/main/resources/         日志配置文件，方便调试bug，打印日志，需要配置此项  
