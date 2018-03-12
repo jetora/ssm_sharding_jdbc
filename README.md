@@ -1,7 +1,6 @@
 Maven的多模块 Spring MVC + Spring + Mybatis 项目的搭建
-
-项目目录  
 ```
+##项目目录  
 ssm_multi_modules
 ├── ssm-common -- 公共模块，主要存放一些工具类
 |    ├── src
@@ -19,9 +18,8 @@ ssm_multi_modules
 |    ├── src
 |    ├── pom.xml -- 打包方式：war
 ├── pom.xml --打包方式为pom，一些公用的依赖
-```
-各模块的依赖关系  
-```
+
+##各模块的依赖关系  
                     ssm_multi_modules   
                          |  
    ---------------------------------------------------------  
@@ -30,19 +28,18 @@ ssm-dao     ssm-service     ssm-web     ssm-common      ssm-pojo
   |依赖           |依赖         |依赖  
   \/             \/            \/   
 ssm-pojo        ssm-dao     ssm-service  				
-```				
-SSM框架的整合  
-```
-开发环境是：
-    IntelliJ IDEA 2017.3.4
-    JDK 1.8.0_162
-    Tomcat 7
-    Maven 3.5.3
-    MySQL 5.7.16
-三大框架版本：
-    Spring 5.0.4.RELEASE
-    Spring MVC 5.0.4.RELEASE
-    MyBatis 3.4.5
+	
+##SSM框架的整合 
+开发环境是：  
+    IntelliJ IDEA 2017.3.4  
+    JDK 1.8.0_162  
+    Tomcat 7  
+    Maven 3.5.3  
+    MySQL 5.7.16  
+三大框架版本：  
+    Spring 5.0.4.RELEASE  
+    Spring MVC 5.0.4.RELEASE  
+    MyBatis 3.4.5  
 核心配置文件：  
 文件名                     所属目录                            描述  
 mybatis-config.xml  ssm-web/src/main/resources/spring   mybatis分页插件pagehelper配置文件  
