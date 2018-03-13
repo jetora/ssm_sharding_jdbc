@@ -29,6 +29,7 @@
         <fastjson.version>1.2.35</fastjson.version>
         <gson.version>2.2.4</gson.version>
         <commons-lang3.version>3.3.2</commons-lang3.version>
+        <pagehelper.version>4.1.4</pagehelper.version>
 
         <!--编译级别-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -211,6 +212,13 @@
             <groupId>org.glassfish</groupId>
             <artifactId>javax.el</artifactId>
             <version>3.0.0</version>
+        </dependency>
+
+        <!-- mybatis分页插件 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>${pagehelper.version}</version>
         </dependency>
 
         <!--apache工具包-->

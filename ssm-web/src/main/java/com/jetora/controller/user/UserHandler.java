@@ -90,21 +90,25 @@ public class UserHandler {
     @PostMapping(value = "/user/add", produces = { "application/json;charset=UTF-8" })
     public ResponseResult<User> insertSaveUser(@RequestBody User user){
         ResponseResult<User> result = new ResponseResult<>();
-        Integer insertresult = userService.insertUser(user);
-        if (insertresult == 1){
+        try {
+            userService.insertUser(user);
             result.setCode(String.valueOf(HttpStatus.OK));
             result.setMsg("insert succeed...");
+        } catch (Exception e) {
+            result.setCode(String.valueOf(HttpStatus.INTERNAL_SERVER_ERROR));
+            result.setMsg("insert failed...");
+            log.error("新增User失败！", e);
         }
         return result;
     }
     @PostMapping(value = "/user/update", produces = { "application/json;charset=UTF-8" })
     public ResponseResult<User> updateSaveUser(@RequestBody User user){
         ResponseResult<User> result = new ResponseResult<>();
-        Integer updateresult = userService.updateUserById(user);
-        if (updateresult == 1){
+        try {
+            userService.updateUserById(user);
             result.setCode(String.valueOf(HttpStatus.OK));
             result.setMsg("update succeed...");
-        }else{
+        } catch(Exception e) {
             result.setCode(String.valueOf(HttpStatus.NOT_FOUND));
             result.setMsg("update failed...");
         }
@@ -113,11 +117,11 @@ public class UserHandler {
     @PostMapping(value = "/user/delete/{id}", produces = { "application/json;charset=UTF-8" })
     public ResponseResult<User> deleteSaveUser(@PathVariable Integer id){
         ResponseResult<User> result = new ResponseResult<>();
-        Integer deleteresult = userService.delUserById(id);
-        if (deleteresult == 1){
+        try {
+            userService.delUserById(id);
             result.setCode(String.valueOf(HttpStatus.OK));
             result.setMsg("delete succeed...");
-        }else{
+        } catch(Exception e){
             result.setCode(String.valueOf(HttpStatus.NOT_FOUND));
             result.setMsg("delete failed...");
         }

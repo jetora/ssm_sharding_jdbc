@@ -26,6 +26,33 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+    <!-- 通过CORS技术实现AJAX跨域访问 -->
+    <filter>
+        <filter-name>corsFilter</filter-name>
+        <filter-class>com.jetora.common.filter.CorsFilter</filter-class>
+        <init-param>
+            <param-name>allowOrigin</param-name>
+            <param-value>*</param-value>
+        </init-param>
+        <init-param>
+            <param-name>allowMethods</param-name>
+            <param-value>GET,POST,PUT,DELETE,OPTIONS</param-value>
+        </init-param>
+        <init-param>
+            <param-name>allowCredentials</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>allowHeaders</param-name>
+            <param-value>Content-Type,Access-Token</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>corsFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
     <!-- Spring监听器 -->
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
