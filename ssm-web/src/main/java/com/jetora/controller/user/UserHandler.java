@@ -104,6 +104,9 @@ public class UserHandler {
         if (updateresult == 1){
             result.setCode(String.valueOf(HttpStatus.OK));
             result.setMsg("update succeed...");
+        }else{
+            result.setCode(String.valueOf(HttpStatus.NOT_FOUND));
+            result.setMsg("update failed...");
         }
         return result;
     }
@@ -114,6 +117,9 @@ public class UserHandler {
         if (deleteresult == 1){
             result.setCode(String.valueOf(HttpStatus.OK));
             result.setMsg("delete succeed...");
+        }else{
+            result.setCode(String.valueOf(HttpStatus.NOT_FOUND));
+            result.setMsg("delete failed...");
         }
         return result;
     }
