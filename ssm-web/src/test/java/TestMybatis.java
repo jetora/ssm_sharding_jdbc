@@ -1,9 +1,18 @@
 import com.jetora.pojo.User;
 import com.jetora.service.user.UserService;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Before;
+import org.junit.BeforeClass;
+import org.apache.ibatis.io.Resources;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import java.io.IOException;
+import java.io.Reader;
+
+
 
 public class TestMybatis {
     /*
@@ -19,5 +28,6 @@ public class TestMybatis {
         User user = userServices.getUserById(1);
         System.out.println(user.getuName() + "------>" + user.getuPassword());
     }
-*/
+    */
 }
+
