@@ -7,7 +7,7 @@ import org.junit.Test;
 import java.util.List;
 
 public class UserMapperTest extends BaseMapperTest {
-    /* 
+    /*
     @Test
     public void testSelectById(){
         //获取sqlSession
