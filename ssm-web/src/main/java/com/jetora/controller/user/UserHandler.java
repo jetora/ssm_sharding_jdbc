@@ -7,6 +7,7 @@ import com.jetora.utils.ResponseResult;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.criteria.CriteriaBuilder;
@@ -87,6 +88,7 @@ public class UserHandler {
         result.setData(userslist);
         return result;
     }
+    @Transactional
     @PostMapping(value = "/user/add", produces = { "application/json;charset=UTF-8" })
     public ResponseResult<User> insertSaveUser(@RequestBody User user){
         ResponseResult<User> result = new ResponseResult<>();
