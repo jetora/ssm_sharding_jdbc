@@ -6,6 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestMybatis {
+    /*
     private ApplicationContext ac = null;
     private UserService userServices = null;
     @Before
@@ -18,5 +19,5 @@ public class TestMybatis {
         User user = userServices.getUserById(1);
         System.out.println(user.getuName() + "------>" + user.getuPassword());
     }
-
+*/
 }

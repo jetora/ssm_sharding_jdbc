@@ -2,16 +2,20 @@ package com.jetora.controller.user;
 
 import com.jetora.pojo.User;
 import com.jetora.service.user.UserService;
-import com.jetora.utils.ResourceNotFoundException;
+import com.jetora.common.exception.ResourceNotFoundException;
 import com.jetora.utils.ResponseResult;
-import com.jetora.utils.StringToolUtils;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import java.util.List;
+
 
 @RestController
 public class UserHandler {
+    private static final Logger log = Logger.getLogger(UserHandler.class);
     @Autowired
     UserService userService ;
     /*
@@ -62,8 +66,7 @@ public class UserHandler {
     */
     @GetMapping(value = "/user/{id}", produces = { "application/json;charset=UTF-8" })
     public ResponseResult<User> employById(@PathVariable Integer id) {
-        ResponseResult<User> result = new ResponseResult<User>();
-        HttpStatus status = null;
+        ResponseResult<User> result = new ResponseResult<>();
         User user = userService.getUserById(id);
         if (user == null) {
             throw new ResourceNotFoundException(String.valueOf(id));
@@ -72,4 +75,47 @@ public class UserHandler {
         result.setData(user);
         return result;
     }
+    @GetMapping(value = "/user/list", produces = { "application/json;charset=UTF-8" })
+    public ResponseResult<List<User>> getUsers(){
+        ResponseResult<List<User>> result= new ResponseResult<>();
+        List<User> userslist = userService.getAllUsers();
+        if (userslist.isEmpty()){
+            log.error("空",new ResourceNotFoundException(String.valueOf(userslist.size())));
+            //throw new ResourceNotFoundException(String.valueOf(userslist.size()));
+        }
+        result.setCode(String.valueOf(HttpStatus.OK));
+        result.setData(userslist);
+        return result;
+    }
+    @PostMapping(value = "/user/add", produces = { "application/json;charset=UTF-8" })
+    public ResponseResult<User> insertSaveUser(@RequestBody User user){
+        ResponseResult<User> result = new ResponseResult<>();
+        Integer insertresult = userService.insertUser(user);
+        if (insertresult == 1){
+            result.setCode(String.valueOf(HttpStatus.OK));
+            result.setMsg("insert succeed...");
+        }
+        return result;
+    }
+    @PostMapping(value = "/user/update", produces = { "application/json;charset=UTF-8" })
+    public ResponseResult<User> updateSaveUser(@RequestBody User user){
+        ResponseResult<User> result = new ResponseResult<>();
+        Integer updateresult = userService.updateUserById(user);
+        if (updateresult == 1){
+            result.setCode(String.valueOf(HttpStatus.OK));
+            result.setMsg("update succeed...");
+        }
+        return result;
+    }
+    @PostMapping(value = "/user/delete/{id}", produces = { "application/json;charset=UTF-8" })
+    public ResponseResult<User> deleteSaveUser(@PathVariable Integer id){
+        ResponseResult<User> result = new ResponseResult<>();
+        Integer deleteresult = userService.delUserById(id);
+        if (deleteresult == 1){
+            result.setCode(String.valueOf(HttpStatus.OK));
+            result.setMsg("delete succeed...");
+        }
+        return result;
+    }
+
 }

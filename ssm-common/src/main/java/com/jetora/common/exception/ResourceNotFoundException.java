@@ -1,4 +1,4 @@
-package com.jetora.utils;
+package com.jetora.common.exception;
 
 public class ResourceNotFoundException extends RuntimeException {
     private static final long serialVersionUID = 4880328265878141724L;

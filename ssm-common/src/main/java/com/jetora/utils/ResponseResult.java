@@ -5,13 +5,13 @@ import java.io.Serializable;
 public class ResponseResult<T> implements Serializable {
     private static final long serialVersionUID = -3371934618173052904L;
     private String code;
-    private String desc;
+    private String msg;
     private T data;
     public ResponseResult() {
     }
     public ResponseResult(String code, String desc) {
         this.code = code;
-        this.desc = desc;
+        this.msg = desc;
     }
     public ResponseResult(String code, T data) {
         this.code = code;
@@ -23,11 +23,11 @@ public class ResponseResult<T> implements Serializable {
     public void setCode(String code) {
         this.code = code;
     }
-    public String getDesc() {
-        return desc;
+    public String getMsg() {
+        return msg;
     }
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setMsg(String msg) {
+        this.msg = msg;
     }
     public T getData() {
         return data;
@@ -39,7 +39,7 @@ public class ResponseResult<T> implements Serializable {
     public String toString() {
         return "ResponseResult{" +
                 "code='" + code + '\'' +
-                ", desc='" + desc + '\'' +
+                ", msg='" + msg + '\'' +
                 ", data=" + data +
                 '}';
     }
