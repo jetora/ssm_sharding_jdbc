@@ -29,6 +29,7 @@ public class OrderMapperTest {
         }
         */
         Order order = new Order();
+        order.setOrderId(10);
         order.setUserId(51);
         order.setStatus("aaaaa");
         System.out.println(order);

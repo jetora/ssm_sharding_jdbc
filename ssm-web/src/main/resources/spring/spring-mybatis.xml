@@ -81,7 +81,7 @@
     <master-slave:data-source id="dbtbl_1" master-data-source-name="demo_ds_1" slave-data-source-names="demo_ds_1" strategy-type="ROUND_ROBIN" />
 
     <sharding:inline-strategy id="databaseShardingStrategy" sharding-column="user_id" algorithm-expression="dbtbl_${user_id % 2}" />
-    <sharding:inline-strategy id="orderTableStrategy" sharding-column="order_id" algorithm-expression="t_order_${user_id % 4}" />
+    <sharding:inline-strategy id="orderTableStrategy" sharding-column="order_id" algorithm-expression="t_order_${order_id % 4}" />
 
     <!--
         <sharding:standard-strategy id="databaseShardingStrategy" sharding-column="user_id" precise-algorithm-class="com.jetora.algorithm.PreciseModuloDatabaseShardingAlgorithm"/>
