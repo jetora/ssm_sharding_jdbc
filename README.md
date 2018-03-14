@@ -56,3 +56,5 @@ http://localhost:8080/ssm-demo/user/list
 http://localhost:8080/ssm-demo/user/add  
 http://localhost:8080/ssm-demo/user/update  
 http://localhost:8080/ssm-demo/user/delete/4  
+
+Spring+Sharding JDBC
