@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <groupId>com.jetora.ssm_multi_modules_restful</groupId>
+    <groupId>com.jetora.ssm_sharding_jdbc</groupId>
     <version>1.0-SNAPSHOT</version>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>ssm-web</artifactId>
@@ -82,12 +82,12 @@
 
         <!--添加 ssm-service module依赖-->
         <dependency>
-            <groupId>com.jetora.ssm_multi_modules_restful</groupId>
+            <groupId>com.jetora.ssm_sharding_jdbc</groupId>
             <artifactId>ssm-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>com.jetora.ssm_multi_modules_restful</groupId>
+            <groupId>com.jetora.ssm_sharding_jdbc</groupId>
             <artifactId>ssm-service</artifactId>
             <version>1.0-SNAPSHOT</version>
          </dependency>
