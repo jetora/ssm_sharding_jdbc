@@ -1,8 +1,11 @@
-CREATE TABLE `t_user` (
-  `u_id` int(100) NOT NULL AUTO_INCREMENT,
-  `u_name` varchar(100) DEFAULT NULL,
-  `u_password` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`u_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+CREATE SCHEMA IF NOT EXISTS dbtbl_0_master;
+CREATE SCHEMA IF NOT EXISTS dbtbl_1_master;
 
-INSERT INTO `t_user` VALUES (1,'leecall','root'),(2,'小明','admin'),(3,'jetora','rootroot');
+CREATE TABLE IF NOT EXISTS dbtbl_0_master.t_order_0 (order_id BIGINT NOT NULL AUTO_INCREMENT, user_id INT NOT NULL, status VARCHAR(50), PRIMARY KEY (order_id));
+CREATE TABLE IF NOT EXISTS dbtbl_0_master.t_order_1 (order_id BIGINT NOT NULL AUTO_INCREMENT, user_id INT NOT NULL, status VARCHAR(50), PRIMARY KEY (order_id));
+CREATE TABLE IF NOT EXISTS dbtbl_0_master.t_order_2 (order_id BIGINT NOT NULL AUTO_INCREMENT, user_id INT NOT NULL, status VARCHAR(50), PRIMARY KEY (order_id));
+CREATE TABLE IF NOT EXISTS dbtbl_0_master.t_order_3 (order_id BIGINT NOT NULL AUTO_INCREMENT, user_id INT NOT NULL, status VARCHAR(50), PRIMARY KEY (order_id));
+CREATE TABLE IF NOT EXISTS dbtbl_1_master.t_order_0 (order_id BIGINT NOT NULL AUTO_INCREMENT, user_id INT NOT NULL, status VARCHAR(50), PRIMARY KEY (order_id));
+CREATE TABLE IF NOT EXISTS dbtbl_1_master.t_order_1 (order_id BIGINT NOT NULL AUTO_INCREMENT, user_id INT NOT NULL, status VARCHAR(50), PRIMARY KEY (order_id));
+CREATE TABLE IF NOT EXISTS dbtbl_1_master.t_order_2 (order_id BIGINT NOT NULL AUTO_INCREMENT, user_id INT NOT NULL, status VARCHAR(50), PRIMARY KEY (order_id));
+CREATE TABLE IF NOT EXISTS dbtbl_1_master.t_order_3 (order_id BIGINT NOT NULL AUTO_INCREMENT, user_id INT NOT NULL, status VARCHAR(50), PRIMARY KEY (order_id));

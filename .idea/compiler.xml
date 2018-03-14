@@ -19,7 +19,6 @@
       <module name="ssm-pojo" target="1.8" />
       <module name="ssm-service" target="1.8" />
       <module name="ssm-web" target="1.8" />
-      <module name="ssm_multi_modules" target="1.8" />
       <module name="ssm_sharding_jdbc" target="1.8" />
     </bytecodeTargetLevel>
   </component>
